@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Art Designs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 1em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: 5% auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .modal-img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Added styles for the popup message */
+        #popupText {
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nail Art Designs</h1>
+        <nav>
+            <a href="#" onclick="displayPopup('home')">Home</a>
+            <a href="#" onclick="displayPopup('contact')">Contact Us</a>
+            <a href="#" onclick="displayPopup('about')">About Us</a>
+        </nav>
+    </header>
+
+    <div class="gallery">
+     <img src="https://static-bebeautiful-in.unileverservices.com/bridal-nail-art-designs-perfect-for-D-day_mobilehome.jpg" alt="Nail Art 1" onclick="openModal('https://static-bebeautiful-in.unileverservices.com/bridal-nail-art-designs-perfect-for-D-day_mobilehome.jpg')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNRdM4l1qRcBMfUaFGAC_L7tuuD0l6LuFPXQ&usqp=CAU" alt="Nail Art 2" onclick="openModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNRdM4l1qRcBMfUaFGAC_L7tuuD0l6LuFPXQ&usqp=CAU')">
+        <img src="https://rukminim2.flixcart.com/image/850/1000/l2krs7k0/artificial-nail/j/w/4/gorgeous-bridal-series-12pcs-rose-gold-nail-art-designs-with-6ml-original-imagdvsdvkcvzcec.jpeg?q=20" alt="Nail Art 3" onclick="openModal('https://rukminim2.flixcart.com/image/850/1000/l2krs7k0/artificial-nail/j/w/4/gorgeous-bridal-series-12pcs-rose-gold-nail-art-designs-with-6ml-original-imagdvsdvkcvzcec.jpeg?q=20')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkV6ruQLqqAzWkxkbDQn2m8cipewVKe0XOug&usqp=CAU" alt="Nail Art 2" onclick="openModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkV6ruQLqqAzWkxkbDQn2m8cipewVKe0XOug&usqp=CAU')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCQJkSJJNYQXmnBlXkJZJEX5wZPQthMI4F1h597IkEu_t2i30NKwuiS8Cco292RksVyjI&usqp=CAU" alt="Nail Art 2" onclick="openModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCQJkSJJNYQXmnBlXkJZJEX5wZPQthMI4F1h597IkEu_t2i30NKwuiS8Cco292RksVyjI&usqp=CAU)">
+        <img src="https://bowienewsonline.com/wp-content/uploads/2016/12/8945dd71159076550928428a296674ea.jpg" alt="Nail Art 2" onclick="openModal('https://bowienewsonline.com/wp-content/uploads/2016/12/8945dd71159076550928428a296674ea.jpg')">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/female-hands-with-red-manicure-nails-hearts-design-royalty-free-image-1674842493.jpg?crop=0.88889xw:1xh;center,top&resize=1200:*" alt="Nail Art 2" onclick="openModal('https://hips.hearstapps.com/hmg-prod/images/female-hands-with-red-manicure-nails-hearts-design-royalty-free-image-1674842493.jpg?crop=0.88889xw:1xh;center,top&resize=1200:*')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHdD7lRVDetII0yeRQVVElRsBniKqYcSvUSw&usqp=CAU" alt="Nail Art 2" onclick="openModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHdD7lRVDetII0yeRQVVElRsBniKqYcSvUSw&usqp=CAU')">    
+        <img src="https://www.fabmood.com/inspiration/wp-content/uploads/2020/10/nail-design-idea-61.jpg" alt="Nail Art 1" onclick="openModal('https://www.fabmood.com/inspiration/wp-content/uploads/2020/10/nail-design-idea-61.jpg')">
+        <img src="https://i.pinimg.com/736x/65/8b/cb/658bcb241dc325c2d2f04836c5bc6a9f.jpg" alt="Nail Art 1" onclick="openModal('https://i.pinimg.com/736x/65/8b/cb/658bcb241dc325c2d2f04836c5bc6a9f.jpg')">
+        <img src="https://i0.wp.com/forcreativejuice.com/wp-content/uploads/2020/04/1-elegant-nail-design-ideas.jpg?fit=600%2C600&ssl=1" alt="Nail Art 1" onclick="openModal('https://i0.wp.com/forcreativejuice.com/wp-content/uploads/2020/04/1-elegant-nail-design-ideas.jpg?fit=600%2C600&ssl=1')">
+        <img src="https://i0.wp.com/forcreativejuice.com/wp-content/uploads/2020/04/elegant-nail-art-ideas/18-elegant-nail-design-ideas.jpg?w=1090" alt="Nail Art 1" onclick="openModal('https://i0.wp.com/forcreativejuice.com/wp-content/uploads/2020/04/elegant-nail-art-ideas/18-elegant-nail-design-ideas.jpg?w=1090')">
+    </div>
+
+    <!-- Image Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <!-- Popup message -->
+    <div id="popupMessage" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p id="popupText"></p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(imgSrc) {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("modalImg").src = imgSrc;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        function displayPopup(page) {
+            var message = "";
+            switch (page) {
+                case 'home':
+                    message = "Welcome to our Nail Art Designs website! Explore our beautiful nail art gallery.";
+                    break;
+                case 'contact':
+                    message = "Contact Us:<br>Email: contact@nailartdesigns.com<br>Phone: +1 (555) 123-4567";
+                    break;
+                case 'about':
+                    message = "About Us:<br>We are passionate about creating stunning nail art designs. Explore our collection and stay inspired!";
+                    break;
+                default:
+                    message = "Invalid selection.";
+            }
+            document.getElementById("popupText").innerHTML = message;
+            document.getElementById("popupMessage").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popupMessage").style.display = "none";
+        }
+    </script>
+</body>
+</html>
